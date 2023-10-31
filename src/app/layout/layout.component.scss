@@ -1,0 +1,13 @@
+.container
+{
+  width: 100vw;
+  height: 100vh;
+}
+.sideBarContainer
+{
+  width: 13vw;
+
+}
+::ng-deep .p-tree.p-component.p-tree-selectable{
+  height: 100vh;
+}

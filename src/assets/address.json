@@ -1,0 +1,25 @@
+[
+  {
+    "label":"test1",
+    "data":"",
+    "icon": "pi pi-file",
+    "children": [{
+      "label": "test2",
+      "data":"test2",
+      "icon": "pi pi-file",
+      "children": [
+        {"label": "test3","data":"", "icon": "pi pi-file"},
+        {"label": "error","data":"page404", "icon": "pi pi-file"}]
+     }]
+  },
+  {
+    "label":"login",
+    "data":"login",
+    "icon": "pi pi-file"
+  },
+  {
+    "label":"c3",
+    "data":"",
+    "icon": "pi pi-file"
+  }
+]
