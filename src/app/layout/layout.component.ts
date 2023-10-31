@@ -1,5 +1,6 @@
 
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { PrimeNGConfig } from 'primeng/api';
 
@@ -11,9 +12,20 @@ import { PrimeNGConfig } from 'primeng/api';
 export class LayoutComponent implements OnInit {
 
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+    if(localStorage.getItem('account') == null){
+      console.log('AuthGuard#canActivate 被觸發了');
+
+      this.router.navigateByUrl('/login');
+      return true;
+    }else{
+      this.router.navigateByUrl('/');
+      console.log(localStorage.getItem('account'));
+      return false;
+    }
+
 
 
   }

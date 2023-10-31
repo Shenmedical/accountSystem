@@ -1,3 +1,8 @@
-<input type="text" pInputText [(ngModel)]="requestAccountBuff.account"  class="p-invalid" pInputText />
-<input type="text" pInputText [(ngModel)]="requestAccountBuff.password"  class="p-invalid" pInputText />
-<button pButton type="button" label="Click" (click)="LoginCheck()"></button>
+<div class="loginPanel">
+  帳號：<input type="text" pInputText [(ngModel)]="account"  class="p-invalid" pInputText />
+  密碼：<input type="text" pInputText [(ngModel)]="password"  class="p-invalid" pInputText />
+  <div>
+    <button pButton type="button" label="Click" (click)="LoginCheck()"></button>
+  </div>
+</div>
+

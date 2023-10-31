@@ -3,8 +3,11 @@
     <div class="col-1 sideBarContainer">
       <app-side-bar></app-side-bar>
     </div>
-    <div class="col-11">
-      <router-outlet></router-outlet>
+    <div class="col-11 displayArea">
+      <div class="container">
+        <div class="row"><app-menu-bar></app-menu-bar></div>
+        <div class="row"><router-outlet></router-outlet></div>
+      </div>
     </div>
   </div>
 </div>

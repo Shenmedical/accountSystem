@@ -15,6 +15,8 @@ import {InputTextModule} from 'primeng/inputtext';
 import { FormsModule } from '@angular/forms';
 import { Test1Component } from './test1/test1.component';
 import { Test2Component } from './test2/test2.component';
+import { MenuBarComponent } from './menu-bar/menu-bar.component';
+import {MenubarModule} from 'primeng/menubar';
 
 
 @NgModule({
@@ -25,7 +27,8 @@ import { Test2Component } from './test2/test2.component';
     LayoutComponent,
     LoginComponent,
     Test1Component,
-    Test2Component
+    Test2Component,
+    MenuBarComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,8 @@ import { Test2Component } from './test2/test2.component';
     TreeModule,
     ButtonModule,
     InputTextModule,
-    FormsModule
+    FormsModule,
+    MenubarModule
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent],
