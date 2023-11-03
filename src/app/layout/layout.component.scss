@@ -1,18 +1,52 @@
-.container
-{
-  width: 100vw;
-  height: 100vh;
+.PageSetting {
   margin: 0px;
-}
-.sideBarContainer
-{
-  width: 15%;
-}
-.displayArea{
-  width: 85%;
-  
-}
-::ng-deep .p-tree.p-component.p-tree-selectable{
-  height: 100vh;
+  padding: 0px;
+  height: 100%;
+  width: fit-content;
+
 }
 
+.DisplaySetting {
+  margin: 0px;
+  padding: 0;
+  display: flex;
+  height: 100%;
+  width: fit-content;
+  flex-direction: row;
+}
+
+.sideBarContainer {
+  min-width: 10vw;
+  text-align: left;
+  overflow-y: auto;
+}
+
+.sideBarContainer.active {
+  display: none;
+}
+
+.displayArea {
+  padding: 0px;
+  margin: 0px;
+  text-align: left;
+  width: 100vw;
+
+  .menuBar {
+    width: 90.5vw;
+    padding: 0px;
+  }
+
+  .menuBar.active {
+    width: 100vw;
+  }
+
+  .row>* {
+    padding-right: 0px;
+  }
+
+}
+
+::ng-deep .p-tree.p-component.p-tree-selectable {
+  height: 100vh;
+  padding: 5px;
+}

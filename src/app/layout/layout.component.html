@@ -1,16 +1,11 @@
-<div class="container">
-  <div class="row">
-    <div class="col-1 sideBarContainer">
+<div class=" PageSetting ">
+  <div class="DisplaySetting">
+    <div class=" sideBarContainer" [class]="ms.sidebarSwitch?'active':'' ">
       <app-side-bar></app-side-bar>
     </div>
-    <div class="col-11 displayArea">
-      <div class="container">
-        <div class="row"><app-menu-bar></app-menu-bar></div>
-        <div class="row"><router-outlet></router-outlet></div>
-      </div>
+    <div class="container displayArea">
+      <div class="row menuBar" [class]="ms.sidebarSwitch?'active':'' "><app-menu-bar></app-menu-bar></div>
+      <div class="row display"><router-outlet></router-outlet></div>
     </div>
   </div>
 </div>
-
-
-

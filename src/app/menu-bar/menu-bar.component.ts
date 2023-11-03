@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
-import {MenuItem} from 'primeng/api';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
+import { MenuItem } from 'primeng/api';
+import { CommonService } from '../common.service';
 
 @Component({
   selector: 'app-menu-bar',
@@ -9,15 +11,30 @@ import {MenuItem} from 'primeng/api';
 })
 export class MenuBarComponent implements OnInit {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router,private ms:CommonService) { }
   items!: MenuItem[];
+  clickSideCount = 0;
 
-  ngOnInit(){
+  ngOnInit() {
     this.http.get<MenuItem[]>('assets/menuList.json').subscribe({
-      next: (res) =>{
+      next: (res) => {
         this.items = res;
       }
     })
+  }
+
+  public login() {
+    localStorage.clear();
+    this.router.navigateByUrl('login');
+  }
+
+  public closeSideBar() {
+    this.clickSideCount += 1;
+    if (this.clickSideCount % 2 == 1) {
+      this.ms.sidebarSwitch = true;
+    } else {
+      this.ms.sidebarSwitch = false;
+    }
 
   }
 

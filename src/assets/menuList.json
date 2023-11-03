@@ -1,35 +1,44 @@
 [
   {
-    "label":"user",
+    "label": "user",
     "icon": "pi pi-user",
-    "items": [{
-      "label": "修改密碼",
-      "icon":"pi pi-fw pi-pencil"
-     },{
-      "label": "修改資料",
-      "icon":"pi pi-fw pi-user-edit"
-     }]
+    "items": [
+      {
+        "label": "修改密碼",
+        "icon": "pi pi-fw pi-pencil"
+      },
+      {
+        "label": "修改資料",
+        "icon": "pi pi-fw pi-user-edit"
+      }
+    ]
   },
   {
-    "label":"公告通知",
+    "label": "公告通知",
     "icon": "pi pi-megaphone",
-    "items": [{
-      "label": "通知1",
-      "icon":"pi pi-envelope"
-     },{
-      "label": "通知2",
-      "icon":"pipi-envelope"
-     }]
+    "items": [
+      {
+        "label": "通知1",
+        "icon": "pi pi-envelope"
+      },
+      {
+        "label": "通知2",
+        "icon": "pipi-envelope"
+      }
+    ]
   },
   {
-    "label":"公告通知",
+    "label": "公告通知",
     "icon": "pi pi-megaphone",
-    "items": [{
-      "label": "通知1",
-      "icon":"pi pi-envelope"
-     },{
-      "label": "通知2",
-      "icon":"pipi-envelope"
-     }]
+    "items": [
+      {
+        "label": "通知1",
+        "icon": "pi pi-envelope"
+      },
+      {
+        "label": "通知2",
+        "icon": "pipi-envelope"
+      }
+    ]
   }
 ]

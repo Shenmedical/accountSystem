@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { PrimeNGConfig } from 'primeng/api';
+import { CommonService } from '../common.service';
 
 @Component({
   selector: 'app-layout',
@@ -12,23 +13,20 @@ import { PrimeNGConfig } from 'primeng/api';
 export class LayoutComponent implements OnInit {
 
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,public ms:CommonService) { }
 
   ngOnInit() {
-    if(localStorage.getItem('account') == null){
+    if (localStorage.getItem('account') == null) {
       console.log('AuthGuard#canActivate 被觸發了');
 
       this.router.navigateByUrl('/login');
       return true;
-    }else{
+    } else {
       this.router.navigateByUrl('/');
-      console.log(localStorage.getItem('account'));
       return false;
     }
-
-
-
   }
+
 
 
 

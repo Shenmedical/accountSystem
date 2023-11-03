@@ -1,3 +1,7 @@
-<p-menubar [model]="items">
-  <button pButton label="Logout" icon="pi pi-power-off"></button>
+<p-menubar [model]="items" class="menuBarSet">
+  <ng-template pTemplate="start">
+    <span class="pi pi-angle-double-right" *ngIf="clickSideCount%2==1" (click)="closeSideBar()"></span>
+    <span class="pi pi-angle-double-left" *ngIf="clickSideCount%2==0" (click)="closeSideBar()"></span>
+  </ng-template>
+  <button pButton label="Logout" icon="pi pi-power-off" (click)="login()"></button>
 </p-menubar>
